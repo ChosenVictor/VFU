@@ -1,0 +1,31 @@
+government = monarchy
+add_government_reform = feudalism_reform
+primary_culture = polish
+religion = orthodox
+technology_group = eastern
+historical_friend = LIT
+historical_rival = TEU
+historical_rival = BOH
+capital = 262 # Krakow
+add_accepted_culture = ruthenian
+
+national_focus = MIL
+
+1444.10.1 = {
+	set_estate_privilege = estate_nobles_golden_liberty
+}
+
+1444.1.1 = {
+	monarch = {
+		name = "Abu Bakr Abdullah"
+		dynasty = "ibn Uthman"
+		culture = hejazi
+		religion = sunni
+		birth_date = 1424.11.11		
+		adm = 6
+		dip = 6
+		mil = 6
+	}
+		clear_scripted_personalities = yes
+		add_ruler_personality = immortal_personality
+}
