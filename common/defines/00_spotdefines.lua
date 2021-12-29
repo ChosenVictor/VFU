@@ -26,7 +26,7 @@ NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 10
 
 ---Country
 NDefines.NCountry.MONARCH_MIN_SKILL = 1
-NDefines.NCountry.NAT_FOCUS_YEARS = 20
+NDefines.NCountry.NAT_FOCUS_YEARS = 10
 NDefines.NCountry.EXPLOIT_COOLDOWN_MONTHS = 120
 NDefines.NCountry.ABDICATE_RULING_LENGTH_THRESHOLD = 10
 NDefines.NCountry.ABDICATE_PRESTIGE_HIT = -50
@@ -36,8 +36,8 @@ NDefines.NCountry.CALL_ALLY_DECLINE_PRESTIGE_PENALTY = 0
 NDefines.NCountry.EXPLOIT_COOLDOWN_MONTHS = 120
 
 --NMilitary
-NDefines.NMilitary.BASE_MP_TO_MANPOWER = 0.3
-NDefines.NMilitary.WARGOAL_MAX_BONUS = 40
+NDefines.NMilitary.BASE_MP_TO_MANPOWER = 0.5
+NDefines.NMilitary.WARGOAL_MAX_BONUS = 50
 
 -- Economy
 NDefines.NEconomy.CARAVAN_POWER_MAX = 25
