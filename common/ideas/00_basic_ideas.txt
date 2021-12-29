@@ -819,7 +819,7 @@ expansion_ideas = {
 	}
 
 	additional_colonists = {
-		may_explore = yes
+		colonists = 1
 	}
 	additional_merchants = {
 		merchants = 1
@@ -839,7 +839,7 @@ expansion_ideas = {
 		colonist_placement_chance = 0.05
 	}
 	competetive_merchants  = {
-		colonists = 1
+		global_trade_power = 0.2
 	}
 
 	ai_will_do = {
