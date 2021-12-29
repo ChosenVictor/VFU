@@ -22,6 +22,7 @@ country_decisions = {
 				}
 			}
 			OR = {
+			tag = TUR 
 			tag = SHR
 			tag = YAS
 			tag = ORM
