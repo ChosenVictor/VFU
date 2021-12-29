@@ -1,0 +1,31 @@
+country_decisions = {
+
+		lootbox_decision = {
+			major = no
+			
+			potential = {
+				AND = {
+					ai = no
+					NOT = { has_country_flag = bought_loot_box_decision_flag }
+					NOT = { has_country_modifier = loot_box_cooldown_modifier }
+				}
+			}
+			
+			allow = {
+				is_at_war = no
+			}
+			
+			effect = {
+				set_country_flag = bought_loot_box_decision_flag
+				custom_tooltip = order_lootbox_tooltip
+				hidden_effect = {
+					add_country_modifier = {
+						name = "loot_box_cooldown_modifier"
+						duration = 730
+						hidden = yes
+					}
+				}
+				add_treasury = -10
+			}
+		}
+}
