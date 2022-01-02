@@ -1,0 +1,18 @@
+vfu_colonial_nerf = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		OR = {
+			if = (north_america)
+			if = (south_america)
+	}
+	global_manpower_modifier = -0.2
+	global_tax_modifier = -0.2
+	production_efficiency = -0.1
+	#Province scope
+	on_activation = {
+	}
+	on_deactivation = {
+	}
+}
