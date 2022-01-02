@@ -477,7 +477,7 @@ FRA_ideas = {
 		global_tax_modifier = 0.1
 	}
 	native_trading_principles = {
-		galley_power = 0.1
+		naval_morale = 0.15
 	}
 	vauban_fortifications = {
 		fort_maintenance_modifier = -0.2
