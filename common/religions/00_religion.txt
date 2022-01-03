@@ -24,7 +24,7 @@ christian = {
 			protestant
 		}
 		country = {
-			tolerance_own = 1
+			discipline = 0.025
 			global_heathen_missionary_strength = 0.01
 		}
 		
