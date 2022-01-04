@@ -5,6 +5,16 @@ religion = catholic
 primary_culture = sicilian
 capital = 125	# Palermo
 historical_rival = PAP
+historical_rival = SAR
+historical_rival = SAV
+historical_rival = VEN
+historical_rival = FER
+historical_rival = LAN
+historical_rival = MLO
+historical_rival = COR
+historical_rival = GEN
+historical_rival = SIE
+
 
 
 1442.1.28 = {
