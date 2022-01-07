@@ -478,7 +478,7 @@ WES_ideas = {
 BRA_ideas = {
 	start = {
 		infantry_power = 0.10
-		monthly_militarized_society = 0.2
+		advisor_cost = -0.05
 	}
 	
 	bonus = {
@@ -501,7 +501,7 @@ BRA_ideas = {
 		development_cost = -0.05
 	}
 	kammergericht = {
-		global_tax_modifier = 0.2
+		global_tax_modifier = 0.1
 	}
 	seat_of_the_old_emperors = {
 		diplomatic_reputation = 1
