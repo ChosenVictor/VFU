@@ -1,17 +1,18 @@
 # 90 Vlaanderen - Principal cities: Brugge
 
-owner = FLA
-controller = FLA
+owner = BUR
+controller = BUR
+add_core = BUR
 add_core = FLA
 is_city = yes
 capital = "Brugge"
 culture = flemish
 religion = catholic
-hre = yes
-base_tax = 7
-base_production = 7
+hre = no
+base_tax = 4
+base_production = 5
 trade_goods = cloth
-base_manpower = 4
+base_manpower = 2
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

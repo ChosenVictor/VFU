@@ -6,8 +6,8 @@ bonus = {
     range_to = 1.0
     modifier = {
         max_absolutism = -50
-        global_autonomy = 0.4
-        liberty_desire_from_subject_development = 1.5
+        global_autonomy = 0.3
+        #liberty_desire_from_subject_development = 1.5
         global_tax_modifier = -0.2
     }
 }
@@ -19,7 +19,7 @@ bonus = {
     modifier = {
         max_absolutism = -40
         global_autonomy = 0.3
-        liberty_desire_from_subject_development = 1.0
+       #liberty_desire_from_subject_development = 1.0
         global_tax_modifier = -0.2
     }
 }
@@ -30,8 +30,8 @@ bonus = {
     range_to = 10.0
     modifier = {
         max_absolutism = -30
-        global_autonomy = 0.2
-        liberty_desire_from_subject_development = 1.0
+        global_autonomy = 0.15
+        #liberty_desire_from_subject_development = 1.0
         global_tax_modifier = -0.15
     }
 }
@@ -43,7 +43,7 @@ bonus = {
     modifier = {
         max_absolutism = -15
         global_autonomy = 0.1
-        liberty_desire_from_subject_development = 0.5
+        #liberty_desire_from_subject_development = 0.5
         global_tax_modifier = -0.15
     }
 }
@@ -53,9 +53,9 @@ bonus = {
     range_from = 20.0
     range_to = 30.0
     modifier = {
-        max_absolutism = -10
-        liberty_desire_from_subject_development = 0.25
-        global_tax_modifier = -0.1
+        #max_absolutism = -10
+        #liberty_desire_from_subject_development = 0.25
+        #global_tax_modifier = -0.1
     }
 }
 
@@ -66,9 +66,10 @@ bonus = {
     range_from = 50.0
     range_to = 60.0
     modifier = {
-        max_absolutism = 5
-        global_tax_modifier = 0.05
-		global_manpower_modifier = 0.1
+        max_absolutism = 10
+        global_tax_modifier = 0.10
+		global_manpower_modifier = 0.10
+		global_trade_goods_size_modifier = 0.05
     }
 }
 
@@ -77,10 +78,11 @@ bonus = {
     range_from = 60.0
     range_to = 75.0
     modifier = {
-        max_absolutism = 10
+        max_absolutism = 15
         yearly_absolutism = 1
-        global_tax_modifier = 0.2
+        global_tax_modifier = 0.15
 		global_manpower_modifier = 0.2
+		global_trade_goods_size_modifier = 0.1
     }
 }
 
@@ -89,12 +91,12 @@ bonus = {
     range_from = 75.0
     range_to = 100.0
     modifier = {
-        max_absolutism = 15
-        yearly_absolutism = 1
-        global_tax_modifier = 0.30
-        global_autonomy = -0.01
+        max_absolutism = 20
+        yearly_absolutism = 2.5
+        global_tax_modifier = 0.20
 		global_manpower_modifier = 0.3
-		
+		global_trade_goods_size_modifier = 0.15
+        global_autonomy = -0.05
     }
 }
 
@@ -103,10 +105,11 @@ bonus = {
     range_from = 100.0
     range_to = 9001.0
     modifier = {
-        max_absolutism = 15
-        yearly_absolutism = 1
-        global_tax_modifier = 0.40
-        global_autonomy = -0.05
-		global_manpower_modifier = 0.4
+        max_absolutism = 25
+        yearly_absolutism = 5
+        global_tax_modifier = 0.33
+		global_manpower_modifier = 0.5
+		global_trade_goods_size_modifier = 0.2
+        global_autonomy = -0.1
     }
 }

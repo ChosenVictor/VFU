@@ -5,8 +5,12 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			OR = { # to prevent countries that can't form a prerequisite nation from seeing this
-				tag = GLH
-				tag = ILK
+				#tag = YUA
+				tag = HET
+				#tag = ILK
+				tag = KHA
+				tag = BUK
+				tag = TIM
 				was_never_end_game_tag_trigger = yes
 			}
 			OR = {
@@ -29,6 +33,9 @@ country_decisions = {
 						}
 						region = central_asia_region
 						region = crimea_region
+						province_id = 1816
+						province_id = 1821
+						province_id = 667
 					}
 					NOT = { owned_by = ROOT }
 				}
@@ -36,6 +43,8 @@ country_decisions = {
 					OR = {
 						region = khorasan_region
 						region = persia_region
+						province_id = 295
+						province_id = 280
 					}
 					NOT = {
 						country_or_non_sovereign_subject_holds = ROOT
@@ -45,19 +54,12 @@ country_decisions = {
 		}
 		allow = {
 			OR = {
-				tag = YUA
-				tag = GLH
-				tag = ILK
-			}
-			custom_trigger_tooltip = {
-				tooltip = mongolia_decision_tooltip
-				mongolia_region = {
-					type = all
-					OR = {
-						is_empty = yes
-						owned_by = ROOT
-					}
-				}
+				#tag = YUA
+				tag = HET
+				#tag = ILK
+				tag = BUK
+				tag = TIM
+				tag = OIR
 			}
 			central_asia_region = {
 				type = all
@@ -66,11 +68,17 @@ country_decisions = {
 			crimea_region = {
 				type = all
 				owned_by = ROOT
-			}		
+			}	
 			khorasan_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
+			persia_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			295 = { country_or_non_sovereign_subject_holds = ROOT }
+			280 = { country_or_non_sovereign_subject_holds = ROOT }
 			is_at_war = no
 			is_free_or_tributary_trigger = yes
 		}

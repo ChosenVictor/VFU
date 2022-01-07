@@ -1,16 +1,16 @@
 #4141 - Ditmarschen
 
-owner = DTT
-controller = DTT
-add_core = DTT
+owner = HSA
+controller = HSA
+add_core = HSA
 culture = lower_saxon
 religion = catholic
 hre = yes
-base_tax = 4
+base_tax = 2
 base_production = 3
 trade_goods = grain
 base_manpower = 3
-capital = "Meldorf"
+capital = "Heide" #Or Meldorf
 is_city = yes
 discovered_by = eastern
 discovered_by = western

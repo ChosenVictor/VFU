@@ -67,11 +67,11 @@ hanseatic_expansion_tree = {
 					add_permanent_claim = ROOT
 				}
 			}
-			capital_scope = {
+			1876 = {
 				add_trade_modifier = {
 					who = root
-					duration = 7300
-					power = 20
+					duration = -1
+					power = 35
 					key = hsa_lubeck_ascendant
 				}
 			}
@@ -221,7 +221,20 @@ lubeck_misc_tree = {
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
-
+	
+	hsa_high_income_mission = {
+		icon = mission_high_income
+		required_missions = {  } #None
+		position = 1
+		trigger = { share_of_starting_income = 1.5 }
+		effect = {
+			add_country_modifier = {
+				name = "growing_economy"
+				duration = 9125 #25 years
+			}
+		}
+	}
+	
 	hsa_hanseatic_bookkeeping_mission = {
 		icon = mission_rb_monopolize_the_channel
 		required_missions = { hsa_merchant_navy_mission }
@@ -264,7 +277,7 @@ hanseatic_united_tree = {
 		position = 3
 		
 		trigger = {
-			num_of_merchants = 4
+			num_of_merchants = 3
 			years_of_income = 3
 		}
 
@@ -418,11 +431,47 @@ hanseatic_sound_toll_tree = {
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
-
-	hsa_baltic_trade_mission = {
-		icon = mission_develop_nevas_port
+	
+	hsa_seize_jutland_mission = {
+		icon = mission_scandinavian_port_authority
 		required_missions = { end_sound_toll }
 		position = 2
+
+		provinces_to_highlight = {
+			OR = {
+				area = holstein_area
+				area = jutland_area
+				area = south_jutland_area
+				}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 4
+				OR = {
+					area = jutland_area
+					area = holstein_area
+					area = south_jutland_area
+				}
+			}
+		}
+
+		effect = {
+			1975 = {
+				add_trade_modifier = {
+					who = root
+					duration = -1
+					power = 30
+					key = hsa_north_sea
+				}
+			}
+		}
+	}
+	hsa_baltic_trade_mission = {
+		icon = mission_develop_nevas_port
+		required_missions = { hsa_seize_jutland_mission }
+		position = 4
 	
 		provinces_to_highlight = {
 			province_id = 1926 # Baltic Sea
@@ -438,20 +487,6 @@ hanseatic_sound_toll_tree = {
 		}
 	
 		effect = {
-			holstein_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			jutland_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			add_country_modifier = {
 				name = "hsa_baltic_trade_modifier"
 				duration = 7300
@@ -459,76 +494,45 @@ hanseatic_sound_toll_tree = {
 		}
 	}
 
-	hsa_seize_jutland_mission = {
-		icon = mission_scandinavian_port_authority
-		required_missions = { hsa_baltic_trade_mission }
-		position = 4
-
-		provinces_to_highlight = {
-			OR = {
-				area = holstein_area
-				area = jutland_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 4
-				OR = {
-					area = jutland_area
-					area = holstein_area
-				}
-			}
-		}
-
-		effect = {
-			if = {
-				limit = {
-					exists = NOR
-					NOT = { NOR = { is_subject = yes } }
-				}
-				add_casus_belli = {
-					target = NOR
-					type = cb_vassalize_mission
-				}
-			}
-			else = {
-				western_norway = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = ROOT
-				}
-				eastern_norway = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = ROOT
-				}
-				northern_norway = {
-					limit = {
-						NOT = { is_core = root }
-						NOT = { is_permanent_claim = root }
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-		}
-	}
+	
 
 	hsa_subjugate_norway_mission = {
 		icon = mission_seize_north_sea_trade
-		required_missions = { hsa_seize_jutland_mission }
+		required_missions = { hsa_baltic_trade_mission }
 		position = 6
 
 		provinces_to_highlight = {
 			OR = {
 				province_id = 17
 				province_id = 23
-				province_id = 20
+				OR = {
+					AND = {
+						province_id = 370
+						NOT = {
+							371 = {
+								NOT = { country_or_non_sovereign_subject_holds = root }
+								NOT = {
+									owner = {
+										is_in_trade_league_with = root
+									}
+								}
+							}
+						}
+					}
+					AND = {
+						province_id = 371
+						NOT = {
+							370 = {
+								NOT = { country_or_non_sovereign_subject_holds = root }
+								NOT = {
+									owner = {
+										is_in_trade_league_with = root
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			NOT = { country_or_non_sovereign_subject_holds = root }
 			NOT = {
@@ -772,12 +776,7 @@ hanseatic_britain_tree = {
 				}
 			}
 			every_owned_province = {
-				limit = { 
-					OR = {
-						culture = norwegian
-						culture = scottish
-					}
-				}
+				limit = { culture = norwegian }
 				add_nationalism = -5
 			}
 		}
@@ -803,108 +802,6 @@ hanseatic_britain_tree = {
 			}
 			create_explorer = {
 				tradition = 30
-			}
-		}
-	}
-}
-
-hanseatic_colonisation_tree = {
-	slot = 2
-	generic = no
-	ai = yes
-	potential = {
-		tag = HSA
-		NOT = { map_setup = map_setup_random }
-		has_dlc = "Emperor"
-		is_random_new_world = no
-	}
-	potential_on_load = {
-		has_dlc = "Emperor"
-	}
-	has_country_shield = yes
-
-	hsa_newfoundland_trading_ports_mission = {
-		icon = mission_rb_scottish_the_darien_scheme
-		required_missions = { hsa_north_sea_trade_mission }
-		position = 8
-			
-		provinces_to_highlight = {
-			area = newfoundland_area
-			has_discovered = root
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		
-		trigger = {
-			newfoundland_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		
-		effect = {
-			newfoundland_area = { add_base_production = 1 }
-			980 = { center_of_trade = 1 }
-		}
-	}
-
-	hsa_new_lubeck_mission = {
-		icon = mission_rb_the_thirteen_colonies
-		required_missions = { hsa_newfoundland_trading_ports_mission }
-
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					province_id = 965 # Manhattan
-					NOT = {
-						owner = {
-							is_colonial_nation_of = root
-						}
-					}
-				}
-				AND = {
-					colonial_region = colonial_eastern_america
-					NOT = {
-						ROOT = {
-							any_subject_country = {
-								is_colonial_nation = yes
-								num_of_cities = 10
-								any_owned_province = {
-									colonial_region = colonial_eastern_america
-								}
-							}
-						}
-					}
-					OR = {
-						has_port = yes
-						any_neighbor_province = {
-							country_or_non_sovereign_subject_holds = root
-						}
-					}
-				}
-			}
-			has_discovered = root
-		}
-	
-		trigger = {
-			965 = {
-				owner = {
-					is_colonial_nation_of = root
-					num_of_cities = 10
-				}
-			}
-		}
-
-		effect = {
-			add_country_modifier = {
-				name = new_lubeck_modifier
-				duration = 7300	
-			}
-			965 = {
-				change_province_name = "Neulübeck"
-				rename_capital = "Neulübeck"
-				add_base_tax = 1
-				add_base_production = 1
-				add_base_manpower = 1
 			}
 		}
 	}

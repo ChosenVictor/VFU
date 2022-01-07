@@ -1,5 +1,6 @@
 #971 - Abnaki
 
+
 culture = abenaki
 religion = totemism
 capital = "Abnaki"
@@ -8,7 +9,7 @@ hre = no
 base_tax = 1 
 base_production = 2
 base_manpower = 2
-is_city = yes
+
 native_size = 15
 native_ferocity = 3
 native_hostileness = 8
@@ -20,13 +21,6 @@ discovered_by = north_american
 1604.1.1 = { discovered_by = FRA } # Samuel de Champlain
 1605.1.1 = { discovered_by = ENG } # George Waymouth
 1707.5.12 = { discovered_by = GBR } 
-
-1727.1.1 = {
-	owner = ---
-	controller = ---
-	remove_core = ABE
-	is_city = no 
-} #Decline of the New England Abenakis in the wake of Father Rale's War
 1763.2.10 = {
 	owner = GBR
 	controller = GBR

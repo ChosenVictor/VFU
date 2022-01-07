@@ -7,9 +7,7 @@ tim_reconquest_persia = {
 			tag = TIM
 			tag = TRS
 			tag = AFG
-			tag = QOM
-			tag = KHO
-			tag = FRS
+			tag = ISF
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -43,15 +41,9 @@ tim_reconquest_persia = {
 					}
 				}
 				TIM = {
-					OR = {
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = insulted
-						}
-						has_opinion_modifier = {
-							who = ROOT
-							modifier = scornfully_insulted
-						}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = insulted
 					}
 				}
 			}
@@ -144,11 +136,6 @@ tim_reconquest_persia = {
 			OR = {
 				area = farsistan_area
 				area = persian_gulf_coast
-				area = kerman_area
-				province_id = 431
-				province_id = 4327
-				province_id = 2217
-				province_id = 4342
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -160,22 +147,6 @@ tim_reconquest_persia = {
 			}
 			persian_gulf_coast = {
 				type = all
-				owned_by = ROOT
-			}
-			kerman_area = {
-				type = all
-				owned_by = ROOT
-			}
-			431 = {
-				owned_by = ROOT
-			}
-			4327 = {
-				owned_by = ROOT
-			}
-			2217 = {
-				owned_by = ROOT
-			}
-			4342 = {
 				owned_by = ROOT
 			}
 		}
@@ -198,20 +169,6 @@ tim_reconquest_persia = {
 				}
 				add_permanent_claim = ROOT
 			}
-			iraq_e_ajam_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			azerbaijan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	
@@ -225,6 +182,7 @@ tim_reconquest_persia = {
 				area = isfahan_area
 				area = iraq_e_ajam_area
 				area = azerbaijan_area
+				area = teheran_area
 				province_id = 413
 				province_id = 414
 				province_id = 2210
@@ -251,6 +209,10 @@ tim_reconquest_persia = {
 				owned_by = ROOT
 			}
 			azerbaijan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			teheran_area = {
 				type = all
 				owned_by = ROOT
 			}
@@ -320,32 +282,6 @@ tim_reconquest_khorasan = {
 				}
 				add_permanent_claim = ROOT
 			}
-			herat_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			lahore_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			506 = {
-				add_permanent_claim = ROOT
-			}
-			2078 = {
-				add_permanent_claim = ROOT
-			}
-			510 = {
-				add_permanent_claim = ROOT
-			}
-			2075 = {
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	
@@ -357,9 +293,8 @@ tim_reconquest_khorasan = {
 		provinces_to_highlight = {
 			OR = {
 				area = mashhad_area
-				area = birjand_area
+				#area = birjand_area
 				area = sistan_area
-				area = herat_area
 			}
 			NOT = { owned_by = ROOT }
 		}
@@ -369,35 +304,17 @@ tim_reconquest_khorasan = {
 				type = all
 				owned_by = ROOT
 			}
-			birjand_area = {
-				type = all
-				owned_by = ROOT
-			}
+			#birjand_area = {
+			#	type = all
+			#	owned_by = ROOT
+			#}
 			sistan_area = {
-				type = all
-				owned_by = ROOT
-			}
-			herat_area = {
 				type = all
 				owned_by = ROOT
 			}
 		}
 		
 		effect = {
-			ghor_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			kabulistan_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			balkh_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -414,23 +331,11 @@ tim_reconquest_khorasan = {
 		position = 5
 		
 		provinces_to_highlight = {
-			OR = {
-				area = ghor_area
-				area = kabulistan_area
-				area = balkh_area
-			}
+			area = balkh_area
 			NOT = { owned_by = ROOT }
 		}
 		
 		trigger = {
-			ghor_area = {
-				type = all
-				owned_by = ROOT
-			}
-			kabulistan_area = {
-				type = all
-				owned_by = ROOT
-			}
 			balkh_area = {
 				type = all
 				owned_by = ROOT
@@ -457,8 +362,9 @@ tim_reconquest_transoxiana = {
 			tag = TIM
 			tag = TRS
 			tag = AFG
-			tag = QOM
+			tag = ISF
 			tag = KHO
+			tag = BUK
 		}
 		NOT = { map_setup = map_setup_random }
 	}
@@ -470,156 +376,7 @@ tim_reconquest_transoxiana = {
 		position = 1
 		
 		trigger = {
-			stability	= 2
-		}
-		
-		effect = {
-			transoxiana_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			termez_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			458 = {
-				add_permanent_claim = ROOT
-			}
-			1967 = {
-				add_permanent_claim = ROOT
-			}
-			457 = {
-				add_permanent_claim = ROOT
-			}
-			2356 = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	
-	tim_transoxiana_one = {
-		icon = mission_central_asian_city
-		required_missions = { tim_stability }
-		position = 3
-		
-		provinces_to_highlight = {
-			OR = {
-				area = transoxiana_area
-				area = termez_area
-				province_id = 458
-				province_id = 1967
-				province_id = 457
-				province_id = 2356
-			}
-			NOT = { owned_by = ROOT }
-		}
-		
-		trigger = {
-			transoxiana_area = {
-				type = all
-				owned_by = ROOT
-			}
-			termez_area = {
-				type = all
-				owned_by = ROOT
-			}
-			458 = {
-				owned_by = ROOT
-			}
-			1967 = {
-				owned_by = ROOT
-			}
-			457 = {
-				owned_by = ROOT
-			}
-			2356 = {
-				owned_by = ROOT
-			}
-		}
-		
-		effect = {
-			merv_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			437 = {
-				add_permanent_claim = ROOT
-			}
-			438 = {
-				add_permanent_claim = ROOT
-			}
-			2349 = {
-				add_permanent_claim = ROOT
-			}
-			2214 = {
-				add_permanent_claim = ROOT
-			}
-			441 = {
-				add_permanent_claim = ROOT
-			}
-			2362 = {
-				add_permanent_claim = ROOT
-			}
-			1973 = {
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	
-	tim_transoxiana_two = {
-		icon = mission_non-western_cavalry_raid
-		required_missions = { tim_transoxiana_one }
-		position = 5
-		
-		provinces_to_highlight = {
-			OR = {
-				area = merv_area
-				province_id = 437
-				province_id = 438
-				province_id = 2349
-				province_id = 2214
-				province_id = 441
-				province_id = 2362
-				province_id = 1973
-			}
-			NOT = { owned_by = ROOT }
-		}
-		
-		trigger = {
-			merv_area = {
-				type = all
-				owned_by = ROOT
-			}
-			437 = {
-				owned_by = ROOT
-			}
-			438 = {
-				owned_by = ROOT
-			}
-			2349 = {
-				owned_by = ROOT
-			}
-			2214 = {
-				owned_by = ROOT
-			}
-			441 = {
-				owned_by = ROOT
-			}
-			2362 = {
-				owned_by = ROOT
-			}
-			1973 = {
-				owned_by = ROOT
-			}
+			stability	= 1
 		}
 		
 		effect = {
@@ -628,97 +385,6 @@ tim_reconquest_transoxiana = {
 				name = "tim_steppe_reconquest"
 				duration = 5475
 			}
-		}
-	}
-	
-}
-
-tim_india = {
-	slot = 3
-	generic = no
-	ai = yes
-	potential = {
-		OR = {
-			tag = TIM
-			tag = TRS
-			tag = AFG
-			tag = QOM
-			tag = KHO
-		}
-		NOT = { has_dlc = "Dharma" }
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	
-	conquer_punjab_MUG = {
-		icon = mission_indian_soldier_elephant
-		required_missions = { }
-		position = 6
-		
-		provinces_to_highlight = {
-			OR = {
-				area = lahore_area
-				area = sind_sagar_area
-			}
-			NOT = { owned_by = ROOT }
-		}
-		
-		trigger = {
-			lahore_area = {
-				type = all
-				owned_by = ROOT
-			}
-			sind_sagar_area = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		
-		effect = {
-			sirhind_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_doab_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	
-	conquer_delhi = {
-		icon = mission_monarch_in_throne_room
-		required_missions = { conquer_punjab_MUG }
-		position = 7
-		
-		provinces_to_highlight = {
-			OR = {
-				area = sirhind_area
-				area = upper_doab_area
-			}
-			NOT = { owned_by = ROOT }
-		}
-		
-		trigger = {
-			sirhind_area = {
-				type = all
-				owned_by = ROOT
-			}
-			upper_doab_area = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		
-		effect = {
-			add_treasury = 500
-			add_prestige = 20
 		}
 	}
 }

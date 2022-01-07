@@ -3,6 +3,10 @@ country_decisions = {
 	italian_nation = {
 		major = yes
 		potential = {
+			OR = {
+				tag = MLO
+				tag = VEN
+				}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_italy_flag }
@@ -45,17 +49,13 @@ country_decisions = {
 						owns_core_province = 101	
 						owns_core_province = 104	
 						owns_core_province = 116	
-						owns_core_province = 118
-						owns_core_province = 121
-						owns_core_province = 1933
+						owns_core_province = 118	
 					}
 				}
 				province_id = 101	# Genoa
 				province_id = 104	# Milan
 				province_id = 116	# Firenze
 				province_id = 118	# Roma
-				province_id = 121	# Napoli
-				province_id = 1933	# Bari
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -70,10 +70,8 @@ country_decisions = {
 			owns_core_province = 104	# Milan
 			owns_core_province = 116	# Firenze
 			owns_core_province = 118	# Roma
-			owns_core_province = 121	# Napoli
-			owns_core_province = 1933	# Bari
 			num_of_owned_provinces_with = {
-				value = 20
+				value = 40
 				region = italy_region
 				is_core = root
 			}
@@ -186,9 +184,8 @@ country_decisions = {
 		}
 		effect = {
 			country_event  = { id = catholic_flavor.2 }
-			every_province = {
+			italy_region = {
 				limit = {
-					region = italy_region
 					NOT = { owned_by = ROOT }
 				}
 				add_permanent_claim = ROOT

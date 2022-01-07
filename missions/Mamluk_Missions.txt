@@ -3,7 +3,10 @@ mam_south_missions = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = MAM
+		OR = {
+			tag = MAM
+			tag = EGY
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -122,7 +125,10 @@ mam_north_missions = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = MAM
+		OR = {
+			tag = MAM
+			tag = EGY
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -160,6 +166,14 @@ mam_north_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			eastern_mediterrenean_islands_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_sailors = 5000
 		}
 	}
 	mam_pacify_bedouins = {
@@ -168,7 +182,6 @@ mam_north_missions = {
 		provinces_to_highlight = {
 			OR = {
 				area = syrian_desert_area
-				area = nafud_area
 				area = tabuk_area
 			}
 			NOT = {
@@ -180,10 +193,6 @@ mam_north_missions = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			nafud_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			tabuk_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -192,36 +201,14 @@ mam_north_missions = {
 		effect = {
 			add_country_modifier = {
 				name = "bedouins_pacified"
-				duration = 7300
+				duration = -1
 			}
-			aleppo_area = {
+			cukurova_area = {
 				limit = {
 					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_permanent_claim = ROOT
-			}
-			327 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
-			2302 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
 			}
 			karaman_area = {
 				limit = {
@@ -243,62 +230,128 @@ mam_north_missions = {
 		icon = mission_non-western_soldiers
 		required_missions = { mam_pacify_bedouins }
 		provinces_to_highlight = {
-			OR = {
-				area = aleppo_area
-				area = karaman_area
-				area = dulkadir_area
-				province_id = 327
-				province_id = 2302
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+				region = anatolia_region
 		}
 		trigger = {
-			aleppo_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			327 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2302 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			karaman_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			dulkadir_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+			war_with = TUR
 		}
 		effect = {
 			add_country_modifier = {
 				name = "beyliks_subjugated"
 				duration = 7300
 			}
-			erzurum_area = {
-				limit = {
-					NOT = { is_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_claim = ROOT
+			
+		}
+	}
+	mam_turks_defeated = {
+		icon = mission_non-western_soldiers
+		required_missions = { mam_subjugate_beyliks }
+		provinces_to_highlight = {
+			OR = {
+				province_id = 316
+				province_id = 2296
+				province_id = 2298
+				province_id = 318
+				province_id = 1848
 			}
-			armenia_area = {
-				limit = {
-					NOT = { is_claim = ROOT	}
-					NOT = { is_core = ROOT	}
-				}
-				add_claim = ROOT
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			north_kurdistan_area = {
+		}
+		trigger = {
+			316 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2296 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			2298 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			318 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			1848 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "turks_defeated"
+				duration = 7300
+			}
+			add_treasury = 1000
+			add_manpower = 30
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+			anatolia_region = {
 				limit = {
-					NOT = { is_claim = ROOT	}
+					NOT = { is_permanent_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			unlock_estate_privilege = {
+				estate_privilege = estate_mamluks_recruit_turkmen
+			}
+		
+		}
+	}
+	mam_Mimar_Sinans_Great_Constructions = {
+		icon = mission_golden_century
+		required_missions = { mam_turks_defeated }
+		trigger = {
+		is_year = 1520
+		owns = 151
+	}
+		effect = {
+			country_event = {
+					id = flavor_tur.3374
+				}
+			custom_tooltip = g_constructions			
+		}
+	}
+	#mam_Expansion_of_the_Royal_Bureaucracy = {
+	#	icon = mission_rb_monopolize_the_channel
+	#	required_missions = { Mimar_Sinan's_Great_Constructions }
+	#	trigger ={
+	#	is_at_war = no
+	#	is_year = 1600
+	#}
+	#	effect = {
+	#		country_event = {
+	#				id = flavor_tur.3366
+	#			}
+	#		custom_tooltip = g_expansion_of_the_royal_bureaucracy
+	#	}
+	#}
+}
+
+gecko_mam_branch_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = MAM
+			tag = EGY
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	gecko_mam_mission_16 = {
+		icon = mission_african_gold
+		position = 1
+		required_missions = {  }
+		trigger = {
+			share_of_starting_income = 1.5
+		}
+		effect = {
+			add_country_modifier = {
+				name = hun_strong_economy
+				duration = 7300
 			}
 		}
 	}

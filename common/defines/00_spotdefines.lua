@@ -25,7 +25,6 @@ NDefines.NDiplomacy.GREAT_POWER_SUBJECT_CONTRIBUTION = 0
 NDefines.NDiplomacy.NUM_OF_GREAT_POWERS = 10
 
 ---Country
-NDefines.NCountry.MAX_CROWN_COLONIES = 200
 NDefines.NCountry.MONARCH_MIN_SKILL = 1
 NDefines.NCountry.NAT_FOCUS_YEARS = 20
 NDefines.NCountry.EXPLOIT_COOLDOWN_MONTHS = 120

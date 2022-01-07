@@ -1152,88 +1152,6 @@ emp_ita_overseas_branch = {
 				name = ita_scipios_helmet
 				duration = 7300
 			}
-		}
-	}
-	
-	emp_ita_befriend_ethiopia = {
-		icon = befriend_ethiopia
-		position = 4
-		required_missions = { emp_ita_africa_proconsulare }
-		
-		provinces_to_highlight = {
-			if = {
-				limit = { exists = ETH }
-				owned_by = ETH
-			}
-			else_if = {
-				limit = {
-					any_country = {
-						capital_scope = {
-							region = horn_of_africa_region
-						}
-						religion_group = christian
-					}
-				}
-				owner = {
-					capital_scope = {
-						region = horn_of_africa_region
-					}
-					religion_group = christian
-					NOT = { alliance_with = ROOT }
-				}
-			}
-			else = {
-				OR = {
-					area = central_ethiopia_area
-					area = southern_ethiopia_area
-					area = tigray_area
-				}
-			}
-		}
-		trigger = {
-			if = {
-				limit = {
-					exists = ETH
-				}
-				alliance_with = ETH
-			}
-			else_if = {
-				limit = {
-					any_country = {
-						capital_scope = {
-							region = horn_of_africa_region
-						}
-						religion_group = christian
-					}
-				}
-				any_country = {
-					custom_trigger_tooltip = {
-						tooltip = emp_ita_befriend_ethiopia_capital_tt
-						capital_scope = {
-							region = horn_of_africa_region
-						}
-					}
-					religion_group = christian
-					alliance_with = ROOT
-				}
-			}
-			else = {
-				central_ethiopia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				southern_ethiopia_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-				tigray_area = {
-					type = all
-					country_or_non_sovereign_subject_holds = ROOT
-				}
-			}
-		}
-		effect = {
-			add_dip_power = 100
 			delta_area = {
 				limit = {
 					NOT = { is_core = ROOT }
@@ -1254,7 +1172,7 @@ emp_ita_overseas_branch = {
 	emp_ita_invade_egypt = {
 		icon = invade_egypt
 		position = 6
-		required_missions = { emp_ita_befriend_ethiopia }
+		required_missions = { emp_ita_africa_proconsulare }
 		
 		provinces_to_highlight = {
 			OR = {

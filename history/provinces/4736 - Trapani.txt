@@ -1,13 +1,13 @@
 # - Syracusa
 
-owner = SIC
-controller = SIC
+owner = NAP
+controller = NAP
 culture = sicilian 
 religion = catholic 
-hre = yes 
+hre = no 
 base_tax = 2
 base_production = 3
-trade_goods = fish
+trade_goods = grain
 base_manpower = 2
 capital = "Trapani"
 is_city = yes

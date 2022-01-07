@@ -1,10 +1,10 @@
 #125 - Palermo
 
-owner = SIC
-controller = SIC
+owner = NAP
+controller = NAP
 culture = sicilian 
 religion = catholic 
-hre = yes
+hre = no 
 base_tax = 5
 base_production = 5
 trade_goods = wine

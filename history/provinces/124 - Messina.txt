@@ -1,19 +1,19 @@
 #124 - Messina
 
-owner = SIC
-controller = SIC
+owner = NAP
+controller = NAP
 culture = sicilian 
 religion = catholic 
-hre = yes
+hre = no 
 base_tax = 6 
 base_production = 6
-trade_goods = fish
+trade_goods = silk
 base_manpower = 5
 fort_15th = yes #Numerous forts, Castello Maniace and Castello di Milazzo being the prominent.
 capital = "Messina"
 is_city = yes 
-add_core = SIC
 add_core = NAP
+add_core = SIC
 
 
 
@@ -21,7 +21,6 @@ discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-
 
 1516.1.23 = {
 	owner = SPA

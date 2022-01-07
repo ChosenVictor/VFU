@@ -11,7 +11,6 @@ is_city = yes
 add_core = HES
 controller = HES
 hre = yes
-add_core = MAI
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim

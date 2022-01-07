@@ -1,6 +1,6 @@
 #943 - Miami
 
-culture = illini
+culture = miami
 religion = totemism
 capital = "Miami"
 trade_goods = fur
@@ -8,7 +8,6 @@ hre = no
 base_tax = 1 
 base_production = 1
 base_manpower = 1
-is_city = yes
 native_size = 10
 native_ferocity = 1
 native_hostileness = 0
@@ -39,10 +38,3 @@ discovered_by = north_american
 	is_city = yes
 	religion = protestant 
 } #The death of Tecumseh mark the end of organized native resistance 
-1818.1.1 = {
-	owner = USA
-	controller = USA
-	add_core = USA
-	culture = american
-	religion = protestant
-} # Treaty of St Mary

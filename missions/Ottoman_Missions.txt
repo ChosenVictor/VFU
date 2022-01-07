@@ -3,7 +3,10 @@ tur_conquerors_of_the_near_east = {
 	generic = no #if a mission without generic = yes wants this slot then it overrides this.
 	ai = yes
 	potential = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
@@ -33,6 +36,8 @@ tur_conquerors_of_the_near_east = {
 						province_id = 4701
 						province_id = 4699
 						province_id = 4698
+						province_id = 6120
+						province_id = 3003
 					}
 				}
 				add_permanent_claim = ROOT
@@ -45,22 +50,20 @@ tur_conquerors_of_the_near_east = {
 		position = 3
 		provinces_to_highlight = {
 			OR = {
-				province_id = 145
-				province_id = 146
-				province_id = 1773
-				province_id = 4701
-				province_id = 4699
-				province_id = 4698
+				area = morea_area
+				area = XMP_central_greece_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			owns = 145
-			owns = 146
-			owns = 1773
-			owns = 4701
-			owns = 4699
-			owns = 4698
+			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			XMP_central_greece_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+
 		}
 		completed_by = 1460.1.1
 		effect = {
@@ -132,7 +135,7 @@ tur_conquerors_of_the_near_east = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 8
+				value = 7
 				OR = {
 					area = rascia_area
 					area = serbia_area
@@ -193,7 +196,7 @@ tur_conquerors_of_the_near_east = {
 					NOT = { is_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -206,7 +209,6 @@ tur_conquerors_of_the_near_east = {
 		ai_priority = {
 			factor = 1
 		}
-		completed_by = 1542.1.1
 		provinces_to_highlight = {
 			area = alfold_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -227,24 +229,82 @@ tur_conquerors_of_the_near_east = {
 					NOT = { is_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
 			transdanubia_area = {
 				limit = {
 					NOT = { is_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
 			croatia_area = {
 				limit = {
 					NOT = { is_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
+			}
+			slavonia_area = {
+				limit = {
+					NOT = { is_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
+	conquer_habsburgs = {
+		icon = mission_eastern_european_city
+		required_missions = {
+		conquer_hungary
+		vassalize_transylvania 
+		}
+		ai_weight = {
+			factor = 2
+		}
+		ai_priority = {
+			factor = 1
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = austria_proper_area
+				area = transdanubia_area
+				area = croatia_area
+				area = slavonia_area
+				area = slovakia_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			austria_proper_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			transdanubia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			croatia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			slavonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			slovakia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "kaiser_of_europe"
+				duration = -1
+			}
+		}
+	}	
 }
 
 tur_eastern_balkans = {
@@ -252,7 +312,10 @@ tur_eastern_balkans = {
 	ai = yes
 	
 	potential = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -334,7 +397,7 @@ tur_eastern_balkans = {
 					NOT = { is_claim = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
-				add_claim = ROOT
+				add_permanent_claim = ROOT
 			}
 		}
 	}
@@ -345,7 +408,10 @@ tur_conquest_of_middle_east = {
 	ai = yes
 	
 	potential = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -369,12 +435,19 @@ tur_conquest_of_middle_east = {
 				}
 				add_permanent_claim = ROOT
 			}
-			if = {
+			cukurova_area = {
 				limit = {
-					NOT = { is_core = 2302 }
-					NOT = { owns = 2302 }
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
 				}
-				add_permanent_claim = 2302
+				add_permanent_claim = ROOT
+			}
+			dulkadir_area = {
+				limit = {
+					NOT = { is_permanent_claim = ROOT	}
+					NOT = { is_core = ROOT	}
+				}
+				add_permanent_claim = ROOT
 			}
 			kastamonu_area = {
 				limit = {
@@ -480,7 +553,7 @@ tur_conquest_of_middle_east = {
 		effect = {
 			add_country_modifier = {
 				name = "anatolia_eyalet"
-				duration = 3650
+				duration = 7300
 			}
 			north_kurdistan_area = {
 				limit = {
@@ -529,27 +602,14 @@ tur_conquest_of_middle_east = {
 		}
 		completed_by = 1514.8.23
 		provinces_to_highlight = {
-			OR = {
-				area = north_kurdistan_area
 				area = dulkadir_area
-				province_id = 2305
-				province_id = 331
-			}
+			
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		trigger = {
-			north_kurdistan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
+
 			dulkadir_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			2305 = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			331 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -687,7 +747,10 @@ tur_conquest_of_middle_east = {
 tur_black_sea = {
 	slot = 4
 	potential = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -747,7 +810,10 @@ tur_eastern_mediterrenean_missions = {
 	ai = yes
 	
 	potential = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -952,6 +1018,10 @@ tur_eastern_mediterrenean_missions = {
 				}
 				add_permanent_claim = ROOT
 			}
+			add_country_modifier = {
+				name = "caliphate_proclaimed"
+				duration = -1
+			}
 		}
 	}
 	defeat_the_knights = { #Conquer Rhodes
@@ -1000,7 +1070,10 @@ tur_eastern_mediterrenean_missions = {
 tur_conquer_western_mediterrenean = {
 	slot = 2
 	potential = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -1104,7 +1177,10 @@ tur_conquer_western_mediterrenean = {
 tur_indian_ocean = {
 	slot = 4
 	potential = {
-		tag = TUR
+		OR = {
+			tag = TUR
+			tag = RUM
+		}
 		NOT = { map_setup = map_setup_random }
 	}
 	
@@ -1188,4 +1264,127 @@ tur_indian_ocean = {
 			add_claim = 2054 #Ahmedabad
 		}
 	}
+}	
+gecko_tur_events = {
+	slot = 3
+	ai = yes
+	generic = yes #if a mission without generic = yes wants this slot then it overrides this.
+	potential = {
+		OR = {
+			tag = TUR
+			tag = RUM
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	
+	has_country_shield = yes
+	
+	military_reforms = {
+		icon = mission_non-western_soldiers
+		required_missions = {  }
+		position = 1
+		trigger = {
+			OR ={
+				tag = TUR
+				tag = RUM
+			}
+		is_year = 1450
+		NOT = { is_year = 1550 }
+		MIL = 3
+		}
+		effect = {
+			country_event = {
+					id = flavor_tur.3354
+				}
+				custom_tooltip = g_military_reforms_of_mehmet
+		}		
+	}
+
+	enderun_academy = {
+		icon = mission_cossack_cavalry
+		required_missions = {  }
+		position = 2
+		trigger = {
+			OR ={
+				tag = TUR
+				tag = RUM
+			}
+		has_idea = timariot_system
+		has_country_modifier = the_devshirme_system
+		}
+		effect = {
+			country_event = {
+					id = flavor_tur.3357
+				}	
+					custom_tooltip = g_enderun_academy	
+		}
+	}
+	Great_Naval_Reform = {
+		icon = mission_establish_high_seas_navy
+		required_missions = {  }
+		position = 3
+		trigger ={
+		OR ={
+				tag = TUR
+				tag = RUM
+			}
+		is_year = 1500
+		is_at_war = no
+		any_owned_province = {
+			has_port = yes
+		}
+		OR = {
+				num_of_heavy_ship = 10 
+				num_of_galley = 30
+			}
+		}
+		effect = {
+			country_event = {
+					id = flavor_tur.3367
+				}
+			add_country_modifier = {
+				name = "naval_enthusiasm_mission"
+				duration = 9125 #25 years
+			}				
+			custom_tooltip = g_naval_reform		
+		}
+	}
+	Mimar_Sinans_Great_Constructions = {
+		icon = mission_golden_century
+		required_missions = {  }
+		position = 4
+		trigger = {
+		OR ={
+				tag = TUR
+				tag = RUM
+			}
+		is_year = 1520
+		owns = 151
+	}
+		effect = {
+			country_event = {
+					id = flavor_tur.3374
+				}
+			custom_tooltip = g_constructions			
+		}
+	}
+	#Expansion_of_the_Royal_Bureaucracy = {
+	#	icon = mission_rb_monopolize_the_channel
+	#	required_missions = {  }
+	#	position = 5
+	#	trigger ={
+	#	OR ={
+	#			tag = TUR
+	#			tag = RUM
+	#		}
+	#	is_at_war = no
+	#	is_year = 1620
+	#}
+	#	effect = {
+	#		country_event = {
+	#				id = flavor_tur.3366
+	#			}
+	#		custom_tooltip = g_expansion_of_the_royal_bureaucracy
+	#	}
+	#}
 }

@@ -1,7 +1,7 @@
 #107 - Brescia
 
-owner = MLO		# From 1426
-controller = MLO
+owner = MAN # From 1426
+controller = MAN
 culture = lombard 
 religion = catholic 
 hre = yes 
@@ -11,6 +11,7 @@ trade_goods = cloth
 base_manpower = 3
 capital = "Brescia" 
 is_city = yes
+add_core = MAN
 add_core = MLO
 fort_15th = yes
 
@@ -20,6 +21,7 @@ discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
+
 
 1495.1.1 = { hre = no }
 1509.6.1 = { controller = FRA } # Venice collapses

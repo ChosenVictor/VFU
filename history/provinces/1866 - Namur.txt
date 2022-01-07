@@ -4,18 +4,20 @@ latent_trade_goods = {
 	coal
 }
 
-owner = LIE
-controller = LIE
-add_core = LIE
+owner = BUR
+controller = BUR
+add_core = BUR
 capital = "Namur"
 is_city = yes
 culture = wallonian
 religion = catholic
-hre = yes
+#hre = yes
 base_tax = 7 
 base_production = 7
 trade_goods = iron
 base_manpower = 3
+estate = estate_church
+add_core = HAI
 fort_15th = yes
 discovered_by = eastern
 discovered_by = western

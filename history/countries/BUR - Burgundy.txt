@@ -1,13 +1,13 @@
 government = monarchy
 add_government_reform = feudalism_reform
-government_rank = 1
+government_rank = 2
 primary_culture = burgundian
 add_accepted_culture = wallonian
+add_accepted_culture = flemish
 religion = catholic
 technology_group = western
-capital = 192	# Dijon
+capital = 1866	# Dijon
 add_army_professionalism = 0.1
-historical_rival = HAB
 
 1363.1.1 = {
 	monarch = {
@@ -68,11 +68,10 @@ historical_rival = HAB
 	monarch = {
 		name = "Philippe III"
 		dynasty = "de Bourgogne"
-		birth_date = 1396.7.31
+		birth_date = 1395.7.31
 		adm = 5
 		dip = 5
 		mil = 5
-		leader = { name = "Philippe III"   	type = general	fire = 3	shock = 3	manuever = 3	siege = 1 }
 	}
 	clear_scripted_personalities = yes
 	add_ruler_personality = calm_personality
@@ -103,8 +102,8 @@ historical_rival = HAB
 		birth_date = 1433.11.10
 		death_date = 1477.1.5
 		claim = 95
-		adm = 2
-		dip = 0
+		adm = 3
+		dip = 3
 		mil = 4
 	}
 	set_heir_flag = is_charles_of_burg_flag

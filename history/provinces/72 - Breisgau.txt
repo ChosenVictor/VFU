@@ -1,8 +1,7 @@
 #72 - Breisgau
 
-owner = BAD
-controller = BAD
-add_core = BAD
+owner = TIR
+controller = TIR
 add_core = TIR
 culture = swabian
 religion = catholic

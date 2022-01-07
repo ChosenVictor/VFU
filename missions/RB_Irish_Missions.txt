@@ -518,7 +518,7 @@ ire_conquest_2 = {
 			add_prestige = 25
 			add_country_modifier = {
 				name = "rule_britannia"
-				duration = 14600
+				duration = 3650
 			}
 		}
 	}
@@ -608,93 +608,6 @@ ire_conquest_4 = {
 			add_country_modifier = {
 				name = "trinity_college"
 				duration = 7300
-			}
-		}
-	}
-}
-ire_colonial_missions = {
-	slot = 5
-	generic = no
-	ai = yes
-	potential_on_load = {
-		has_dlc = "Rule Britannia"
-	}
-	potential = {
-		has_dlc = "Rule Britannia"
-		is_random_new_world = no
-		OR = {
-			tag = ULS
-			tag = TRY
-			tag = TYR
-			tag = MTH
-			tag = SLN
-			tag = FLY
-			tag = KID
-			tag = CNN
-			tag = MNS
-			tag = ORD
-			tag = LEI
-			tag = DMS
-			tag = MCM
-			tag = IRE
-		}
-		NOT = { map_setup = map_setup_random }
-	}
-	has_country_shield = yes
-	irish_america = {
-		icon = mission_rb_irish_america
-		required_missions = { }
-		position = 2
-		provinces_to_highlight = {
-			colonial_region = colonial_eastern_america
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			has_discovered = ROOT
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 5
-				colonial_region = colonial_eastern_america
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "irish_new_world"
-				duration = 7300
-			}
-		}
-	}
-	ire_import_potatoes = {
-		icon = mission_rb_import_potatoes
-		required_missions = { irish_america }
-		provinces_to_highlight = {
-			OR = {
-				continent = new_world
-				continent = north_america
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			has_discovered = ROOT
-		}
-		trigger = {
-			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 15
-				OR = {
-					continent = new_world
-					continent = north_america
-				}
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "irish_potatoes"
-				duration = 7300
-			}
-			capital_scope = {
-				add_base_production = 2
-				add_base_manpower = 1
 			}
 		}
 	}

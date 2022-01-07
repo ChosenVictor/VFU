@@ -1,0 +1,754 @@
+trade_company_north_sea = {
+	color = { 117 165 188 }
+	
+	provinces = {
+		1975 1266 1280 1281 1282 1929   #Seas and Wastelands
+		248 249 251 #lowlands_area
+		246 247 4361 4362 #scottish_marches_area
+		253 4364 4365 #kingdom_of_the_isles_area
+		250 252 369 4110 4363 #highlands_area
+		375 376 4119 #connacht_area
+		373 374 4120 4379 #leinster_area
+		372 4121 4380 #ulster_area
+		4118 4377 4378 #munster_area
+		1978 1979 #subarctic_islands_area
+		370 371 #iceland_area
+		4375 244
+		#Norway
+		4143 17 5031 4144
+		4145 23 24 2752 5032 
+		5030 22 5029 5028 10
+		20 5039 21 5033 315
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_NORTH_SEA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_NORTH_SEA_European_Trade_Company"
+	}
+}
+
+trade_company_white_sea = {
+	color = { 210 46 28 }
+	
+	provinces = {
+		1652 1777
+		1955 4122 4256 4257 #arkhangelsk_area
+		313 1776 1958 4258 #pomor_area
+		32 309 4124 #north karelia #smeev
+		33 34 1961 #south karelia #smeev
+		274 275 1960 4148 #pskov_area #smeev 
+		310 311 1959 2749 4260 #novgorod_area #smeev
+		312 4259 4261 #beloozero_area #smeev
+		5034 5035 5036 5037 5038 # xaime sweden
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_WHITE_SEA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_WHITE_SEA_European_Trade_Company"
+	}
+}
+
+trade_company_lubeck = {
+	color = { 190 70 70 }
+	
+	provinces = {
+		12 13 14 15 44 45 46 53 54 55 1775 1857 1874 1981 1983 1984  2996 4141 4142 4149
+		4749 4771 4772 4786
+		47 4745 2994 1858 #vorpommern #smeev
+		48 4746 2995 #hinterpommern #smeev
+		5004 5003 5007 5005 5006
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_LUBECK_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_LUBECK_European_Trade_Company"
+	}
+}
+
+trade_company_baltic_sea = {
+	color = { 8 82 165 }
+	
+	provinces = {
+		1926 1 2 3 4 5 1985 8 9 11 18 19 25 27 28 29 31 35 37 38 39 273 1930 1935 4113 4114 4123 4152 36 1834 1842 4241
+		26 1982 4165 6 #skaneland #smeev
+		16 4164 7 4163 #gotaland #smeev
+		5008 5009 5010 5011 5012 5013 5014 5015 5016 5017 5018 5020 5021 5022 5019 5023 5025 5024 5026 5027 4151
+		30
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_BALTIC_SEA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_BALTIC_SEA_European_Trade_Company"
+	}
+}
+
+trade_company_english_channel = {
+	color = { 220 138 57 }
+	
+	provinces = {
+		1269 1270 1271 #Seas
+		241 242 4366 4369 #wales_area
+		245 4367 4368 4785 #yorkshire_area
+		239 240 4372 #west_midlands_area
+		243 1860 1861 4370 4376 #east_midlands_area
+		233 234 4130 4373 4374 #wessex_area
+		235 236 237 238 4371 #home_counties_area
+		92 95 98 99 2974 #netherlands & brabant_area
+		96 97 4383 #holland_area
+		100 1931 4381 4382 #frisia_area
+		90 1744 1865 #flanders_area
+		4769 4770 1742
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_ENGLISH_CHANNEL_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_ENGLISH_CHANNEL_European_Trade_Company"
+	}
+}
+
+trade_company_bordeaux = {
+	color = { 36 132 247 }
+	
+	provinces = {
+		1276 #Water 
+		190 195 199 # massif_central_area
+		194 198 4112 #guyenne_area
+		180 4111 4386 4387 #poitou_area
+		174 175 176 #pyrenees_area
+		4694 4697 4777 # new for 1.30
+		196 200 2753 4391 4695 #languedoc_area #smeev genoa remerge
+		203 204 205 4719 #savoy_dauphine_area #smeev genoa remerge
+		201 202 2991 4696  # new for 1.30 #provence_area
+		173 #labourd
+		6098 6096 6095 6094 
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_BORDEAUX_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_BORDEAUX_European_Trade_Company"
+	}
+}
+
+trade_company_sevilla = {
+	color = { 57 160 101 }
+	
+	provinces = {
+		206 207 208 1746 215 216 231 232 1293 217 218 219 221 222 223 224 225 226 227 228 229 230 367 1745 1747 1748 1749 1851 2754 2755 2751 4150 
+		4546 4547 4548 4551 4552 4553 4554 4555 4556 4558
+		 368 366 4565 4787 4788 4789
+		209 210 2989 #basque_country #smeev
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_SEVILLA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_SEVILLA_European_Trade_Company"
+	}
+}
+
+#trade_company_safi = {
+#	color = { 191 110 62 }
+#	
+#	provinces = {
+#		344 345 346 347 348 1110 2460 2464 2466 2467 2468 2469 2470 342 343 349 2459 2462 2463 336 337 338 2461 2465
+#		4564 4562 4568
+#	}
+#	
+#	# Specific
+#	# Generic
+#	names = {
+#		name = "TRADE_COMPANY_SAFI_Root_Culture_GetName"
+#	}
+#	names = {
+#		name = "TRADE_COMPANY_SAFI_African_Trade_Company"
+#	}
+#}
+
+trade_company_valencia = {
+	color = { 87 70 168 }
+	
+	provinces = {
+		1295
+		197 212 213 2987 2988 #catalonia_area
+		220 1750 4549 4550 #valencia_area
+		211 214 2990 4557 #aragon_area
+		333 4559 4560 # Baleares
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_VALENCIA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_VALENCIA_European_Trade_Company"
+	}
+}
+
+trade_company_champagne = {
+	color = { 193 26 14 }
+	
+	provinces = {
+		182 183 185 4388 #ile_de_france_area
+		179 184 4776 # Orleans area
+		181 186 4390 #champagne_area
+		187 188 189 #lorraine_area
+		191 192 193 1877 4392 #bourgogne_area
+		167 168 1879 4385 #normandy_area #smeev
+		169 170 171 172 4384 #brittany_area #smeev
+		4764 4766 
+		91 93 94 1866 #wallonia_area
+		177 178 4389 #loire_area #smeev
+		87 88 89 1743 #picardy_area #smeev
+		6093 6092 6091 6090 6089 6088 6087 6086 6085 6084 6083 6082 6081 #gcfrance
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_CHAMPAGNE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_CHAMPAGNE_European_Trade_Company"
+	}
+}
+
+trade_company_genua = {
+	color = { 218 215 56 }
+	
+	provinces = {
+		1298 #Sea
+		#124 125 126 2982 #sicily_area
+		115 116 2978 2980 #tuscany_area
+		#123 1934 2984 #calabria_area
+		101 102 2992 #liguria_area
+		103 1875 2981 #piedmont_area
+		1247
+		4727 # also new for 1.30, but this time it's in Italy
+		#121 2983 # campania
+		104 1862 2979 4728 4740 # Lombardy
+		5781 5782 5783 5785 	#abaitaly
+		105
+		6075 6078 6045 6046 6047 #gc italy
+		106 108 111 112 113 114 130 1308 1774 4729 4730 4738
+		5779 5778 5777
+		109
+		107 4739
+		117 6048 6049
+		6124
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_GENUA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_GENUA_European_Trade_Company"
+	}
+}
+
+trade_company_tunis = {
+	color = { 146 134 57 }
+	
+	provinces = {
+		355 339 340 341 350 351 352 353 354 1882 2448 2449 2450 2451 2452 2453 2454 2455 2456 2457 2458 2472 2473 2954 4566 4567
+		344 345 346 347 348 1110 2460 2464 2466 2467 2468 2469 2470 342 343 349 2459 2462 2463 336 337 338 2461 2465 # PR change
+		4564 4562 4568 # PR change
+		#gecko 
+		5825 5826 5827
+		5813 
+		334 335 4561 1751 4563 #north morocco	
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_TUNIS_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_TUNIS_African_Trade_Company"
+	}
+}
+
+trade_company_rheinland = {
+	color = { 114 171 184 }
+	
+	provinces = {
+		56 77 78 79 80 81 82 83 84 85 86 1760 1761 1876 1878 2973 2975 2972 1762 66 67 
+		4718 4715 4716 4717 71 69
+		4767 4768 4774 4775
+		49 50 57 62 63 1758 51 60 61  1759 1763 52 58 59 2964 2965 2971 2969 2993
+		4741 4742 4743 4744 4747 4748 4773 4778
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_RHEINLAND_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_RHEINLAND_European_Trade_Company"
+	}
+}
+
+#trade_company_saxony = {
+#	color = { 36 182 69 }
+#	
+#	provinces = {
+#		49 50 57 62 63 1758 51 60 61 267 1759 1763 1771 52 58 59 2964 2965 2967 2971 2969 266 2968 2970 2993
+#		4724 4725 4741 4742 4743 4744 4747 4748 4773 4778
+#	}
+#	
+#	# Specific
+#	# Generic
+#	names = {
+#		name = "TRADE_COMPANY_SAXONY_Root_Culture_GetName"
+#	}
+#	names = {
+#		name = "TRADE_COMPANY_SAXONY_European_Trade_Company"
+#	}
+#}
+
+trade_company_wien = {
+	color = { 220 220 220 }
+	
+	provinces = {
+		64 65 76 128 132 133 134 1757 1770 1863 2955 2956 2957 68 1868 70 1872 73 110 1768
+		4707 4708 4709 4710 4711 4712 4713
+		4758 4759 4760 4761 4762 # Austria 1.30
+		265 4237 4726 6106 # Moravia
+		4714 72 74 #baden #smeev
+		75 4765 1880 #alsace #smeev
+		1873 4722 1870 166 1869 #switzerland #smeev
+		165 1867 1871 4721 4720 #romandie_area #smeev
+		266 4724 4725 2968 2970 6102 #bohemia #smeev
+		267 2967 1771 6101 #erzgebirge #smeev
+		129 1769 4751 #krain
+		6103 6104 6105 
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_WIEN_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_WIEN_European_Trade_Company"
+	}
+}
+
+trade_company_venice = {
+	color = { 54 167 156 }
+	
+	provinces = {
+	2977
+	2976 4731 118
+	6050 119 6051 6052 6053 6060
+	121 2983 122 1933 2985 4733 123 1934 2984 124 126 2982 5776 125 4736 4737 5775 127 2986 4735 5780 5786
+	120
+	6125 6126
+	6158 
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_VENICE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_VENICE_European_Trade_Company"
+	}
+}
+
+trade_company_krakow = {
+	color = { 108 111 86 }
+	
+	provinces = {
+		258 259 260 261 262 263 264 1940 256 257 1938 1939 254 255 2424 2959 2960 2961 2966 
+		4238 2963 1859 4523 4524 4526 4528 4525 4527 4533 4541
+		4723
+		43 2997 1841 #west prussia #smeev
+		2958 42 767 41 40 #east prussia #smeev
+		6107 6108 6109 6111 6112 6110
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_KRAKOW_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_KRAKOW_European_Trade_Company"
+	}
+}
+
+trade_company_pest = {
+	color = { 172 95 81 }
+	
+	provinces = {
+		135 153 1864 4126 4240 # Transdanubia
+		155 1953 1954 4125 # Alfold
+		154 162 1318 1772 4236 # Slovakia
+		157 158 1952 4127 # Northern Transylvania
+		156 1951 4128 # Southern Transylvania
+		152 1767 4173 4756 1828 # Slavonia
+		131 4752 1826 #croatia #smeev
+		6100 6099 #gcpest
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_PEST_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_PEST_European_Trade_Company"
+	}
+}
+
+trade_company_ragusa = {
+	color = { 85 89 67 }
+	
+	provinces = {
+		142 144 147 1853 3001 148
+		145 146  1773 #morea_area
+		4702 4699 4698 4701  4780 # 1.30
+		160 161 2998 4531 4532 # wallachia_area #smeev change
+		4703 1765 2746 150 2750 #bulgaria # smeev
+		159 4706 4704 #silistria #smeev
+		1764 151 4779 4705 149 #thrace #smeev
+		4700 164 2348 3003 #aegean_archipelago_area
+		1319 #aegean sea #smeev
+		4174 4750 143 4175 #albania #smeev
+		4754 4753 136 137 #dalmatia #smeev
+		4239 141 4176 3000 4757 #serbia #smeev
+		1827 1766 138 #rascia #smeev
+		140 4755 3002 139 1831 #bosnia #smeev
+		6120 6122 6123 #xmp		
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_RAGUSA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_RAGUSA_European_Trade_Company"
+	}
+}
+
+trade_company_constantinople = {
+	color = { 126 203 120 }
+	
+	provinces = {
+		1320 325 328 2299 2304 
+		329 1846 2300 4314 4315 #rum_area
+		316 317 2296 #hudavendigar_area
+		322 1848 4308 4311 #germiyan_area
+		318 319 2297 2298 4309 #aydin_area
+		326 4312 4313 #ankara_area
+		327 2302 #cukurova_area #smeev
+		323 324 2301 4307 #karaman_area #smeev
+		332 2303 4310 #dulkadir_area #smeev
+		331 2305 330 #erzurum #smeev
+		418 2306 2307 4295 4296 #north_kurdistan_area
+		2308 
+		6115 6116 6117
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_CONSTANTINOPLE_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_CONSTANTINOPLE_European_Trade_Company"
+	}
+}
+
+trade_company_alexandria = {
+	color = { 200 200 102 }
+	
+	provinces={
+		356 357 2326 2325 358 362 363 4316 2316 361 4317 359 4318 2318 4323 2317 2319 4320 4319 360 1231 1233 2321 2320 2315 365 364 6024 6023 6025 6026 163 320 321 6121 
+	}
+	
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_ALEXANDRIA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_ALEXANDRIA_African_Trade_Company"
+	}
+}
+
+trade_company_kiev = {
+	color = { 41 28 31 }
+	
+	provinces = {
+		272 279 281 770 1937 1943 2962 277 278 1941 
+		291 298 299 2408 #sloboda_ukraine_area
+		280 1942 1944 4247 #west_dniepr_area
+		289 290 1945 2407 #east_dniepr_area
+		292 771 4246 #White Ruthenia
+		276 4115 4242 #minsk_area
+		4538 4537 4536 4535 4545 4544 4540 4539 4542 4543 269
+		271 1936 4534 270 #samogitia #smeev
+		293 297 4244 4245 #smolensk_area #smeev
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_KIEV_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_KIEV_European_Trade_Company"
+	}
+}
+
+trade_company_novgorod = {
+	color = { 97 126 37 }
+	
+	provinces = {
+		294 1752 4243 4248 4249 #tver_area
+		295 4251 4252 #moscow_area
+		307 4147 4253 #vladimir_area
+		308 1753 4117 4250 #yaroslavl_area
+		1754 1956 4254 #suzdal_area
+		306 1079 1083 1957 #galich_area #smeev
+		305 1962 1972 4266 #kama_area #smeev
+		1082 2422 4264 #kazan_area #smeev
+		314 4262 4263 #vologda_area #smeev
+		1755 4129 1077 1963 1964 #perm_area #smeev
+		301 1778 4255 #ryazan_area #smeev
+		296 300 4116 #oka_area #smeev
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_NOVGOROD_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_NOVGOROD_European_Trade_Company"
+	}
+}
+
+
+trade_company_crimea = {
+	color = { 59 158 125 }
+	
+	provinces = {
+		1323 1322 282 1974 2406 286 287 2413 2414 284 285 2410 2447 283 2411 2412 
+		6003 6004 6002 6005 6006 6007 6008 6009 6000 6001 #aba crimea
+		268 1756 2405 4529 4530 #moldavia #smeev
+	}
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_CRIMEA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_CRIMEA_European_Trade_Company"
+	}
+}
+
+trade_company_aleppo = {
+	color = { 202 150 172 }
+	
+	provinces = {
+		377 1849 2313 4298 #aleppo_area
+		#transjordan
+		379 1854 380 381 #palestine_area
+		378 382 1855 4297 #syria_area
+		6113 6114
+		405 4270 4271 #syrian_desert_area
+		408 2311 2312 4288 #basra_area
+		406 409 410 2310 4291 #iraq_arabi_area
+		415 4293 4294 #shahrizor_area
+		411 2309 2314 407 4292 #al_jazira_area
+		2334 #wasteland
+	}
+	
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_ALEPPO_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_ALEPPO_Near_East_Trade_Company"
+	}
+}
+
+
+trade_company_astrakhan = {
+	color = { 202 120 152 }
+	
+	provinces = {
+		288 303 465 467 469 470 474 1971 2365 2367 2366 2409 2418 2419 472 471  466 468  
+		302 304 2415 #tambov_area
+		2416 2417 464 #astrakhan_area
+		2421 4265 4267 #volga_area
+		475 1965 2420 2444 #bashkiria_area
+		473 1081 2423 #samara_area	
+		6012 6013 6014 6011 6015 6016 #aba crimea provinces
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_ASTRAKHAN_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_ASTRAKHAN_Europe_Trade_Company"
+	}
+}
+
+trade_company_basra = {
+	color = { 152 151 146 }
+	
+	provinces = {
+	
+	1335 #Persian Gulf
+		394 395 396 2340 2347 #bahrain_area
+		393 2338 4272 #nafud_area
+		392 2337 4273 4274 #qasim_area
+		2335 2336 2339 4275 #yamamah_area
+		4276 #Wasteland
+		384 2329 2330 #medina_area #smeev
+		383 2328 4268 4269 2327 #tabuk_area #smeev
+		385 2331 2332 4277 4278 #mecca_area #smeev
+		397 398 404 2333 #pirate_coast_area
+		403 4285 4287 #oman_area
+		399 400 4286 #mascat_area
+		401 2341 2342 #dhofar_area
+		1332 1334 4347#Sea
+		402 4284 #mahra_area
+		387 2346 4279 #tihama_al_yemen_area
+		390 2344 4281 #upper_yemen_area
+		388 2345 4280 #yemen_area
+		386 391 4282 #asir_area
+		389 2343 4283 #hadramut_area
+		1779
+		
+		
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_BASRA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_BASRA_Near_East_Trade_Company"
+	}
+}
+
+trade_company_persia = {
+	color = { 204 119 31 }
+	
+	provinces = {
+		435 2224 2229 2230 #sistan_area
+		4334 #birjand_area
+		4324 #herat_area #smeev mod
+		417 426 4339 4341 #tabarestan_area
+		427 428 2213 2216 4337 #iraq_e_ajam_area
+		429 433 2222 4335 4171 #isfahan_area
+		2212 2215 4300 4338 #azerbaijan_area
+		413 414 2209 2210 #luristan_area #smeev mod
+		412 2217 4289 4290 4342 #khuzestan_area #smeev mod
+		432 2220 2234 4345 #kerman_area #smeev mod
+		416 2206 2207 4304 #tabriz_area
+		4177 4170 4172 6143 #Wasteland
+		424 #ardabil #smeev mod
+		2211 #ardalan #smeev mod
+		2218 4329 4330 4331 #farsistan_area
+		2214 2221 2235 2236 4326 #mashhad_area
+		6138 6136 6135 6134 6133 6142 
+		430 2219 2223 4332  #persian_gulf_coast
+		431 2999 4327 #mogostan_area
+		6154 6153 6152 6151 6150 6149 6148 6147 6146 6145 6144 6157 6156 6155 
+		4325 446
+	}
+
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_PERSIA_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_PERSIA_Asia_Trade_Company"
+	}
+}
+
+trade_company_caucasus = { #smeev mod
+	color = { 116 0 0 }
+  
+	provinces = { 
+		462 1856 463 2201 2195 2197 422
+		423 2203 4301 #kartli_kakheti_area
+		2196 2204 4303 #samtskhe_area
+		425 2198 2199 2208 4306 #dagestan_area
+		421 4299 4305 4340 #shirvan_area
+		419 420 2202 2205 4302 #armenia_area
+		6010 #circassia #smeev 
+		6139 6141 6140
+		
+		
+	}
+	names = {
+		name = "TRADE_COMPANY_caucasus_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_caucasus_Near_East_Trade_Company"
+	}
+}
+
+trade_company_samarkand = {
+	color = { 141 120 67 }
+	
+	provinces = {
+		439 443 2370 2362 2349 438 437 2350 441 445 444
+	}
+	
+	# Specific
+	# Generic
+	names = {
+		name = "TRADE_COMPANY_SAMARKAND_Root_Culture_GetName"
+	}
+	names = {
+		name = "TRADE_COMPANY_SAMARKAND_Asia_Trade_Company"
+	}
+}

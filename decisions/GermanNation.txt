@@ -6,71 +6,34 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_germany_flag }
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
 			NOT = { exists = GER }
 			NOT = { tag = PAP }
 			NOT = { tag = HLR }
 			NOT = { tag = ROM }
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 15
-					adm_tech = 20
-				}
-			}
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					NOT = { government = theocracy }
-				}
-			}
-			OR = {  
-				tag = BRA
-				tag = PRU
-				tag = HES
-				tag = SWI
-				tag = HAN
-				tag = WES
-				tag = SWA
-				tag = HAB
-			}
-			is_colonial_nation = no
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
+
+			culture_group = germanic
+			
+			#gecko - WIP 
+			#OR = {
+			#	tag = NGF
+			#	tag = SGF
+			#}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 188
-				province_id = 189
-				area = silesia_area
-				AND = {
-					OR = {
-						region = north_german_region
-						region = south_german_region
-					}
-					NOT = {
-						ROOT = {
-							num_of_owned_provinces_with = {
-								value = 100
-								is_core = root
-								OR = {
-									region = north_german_region
-									region = south_german_region
-								}
-							}
-						}
-					}
-				}
+				province_id = 50	# Berlin
+				province_id = 61 # Dresden
+				province_id = 1876 # Frankfurt
+				province_id = 84 # Düsseldorf
+				province_id = 1878 # Aachen
+				province_id = 1758 # Hannover
+				province_id = 45 # Lübeck
+				province_id = 44 # Hamburg
+
+				province_id = 65	# München
+				province_id = 134 # Vienna
+				province_id = 75 # Straßburg
+				province_id = 67 # Nürnberg
 			}
 			OR = {
 				NOT = { owned_by = ROOT }
@@ -82,20 +45,48 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
+			is_emperor = no
+
+			#North German
+			owns_core_province = 50	# Berlin
+			owns_core_province = 61 # Dresden
+			owns_core_province = 1876 # Frankfurt
+			owns_core_province = 84 # Düsseldorf
+			owns_core_province = 1878 # Aachen
+			owns_core_province = 1758 # Hannover
+			owns_core_province = 45 # Lübeck
+			owns_core_province = 44 # Hamburg
+			
+			#South German
+			owns_core_province = 65	# München
+			owns_core_province = 134 # Vienna
+			owns_core_province = 75 # Straßburg
+			owns_core_province = 67 # Nürnberg
+
 			num_of_owned_provinces_with = {
-				value = 100
-				is_core = root
-				OR = {
-					region = north_german_region
-					region = south_german_region
-				}
+				is_core = ROOT
+				region = north_german_region
+				value = 65
 			}
-			silesia_area = { type = all is_core = ROOT owned_by = ROOT }
-			owns_core_province = 188
-			owns_core_province = 189
+			num_of_owned_provinces_with = {
+				is_core = ROOT
+				region = south_german_region		
+				value = 65
+			}
 		}
 		effect = {
 			change_tag = GER
+			restore_country_name_effect = yes
+			emperor = {
+				add_opinion = {
+					who = root
+					modifier = opinion_left_empire
+				}
+			}
+			set_in_empire = no
+			emperor = {
+				country_event = { id = hre_event.5 }
+			}
 			set_government_rank = 3
 			north_german_region = {
 				limit = {
@@ -125,10 +116,6 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				tag = HAB
-			}
 		}
 	}
 }

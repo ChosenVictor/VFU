@@ -4,24 +4,13 @@ technology_group = western
 religion = catholic
 primary_culture = sicilian
 capital = 125	# Palermo
-historical_rival = PAP
-historical_rival = SAR
-historical_rival = SAV
-historical_rival = VEN
-historical_rival = FER
-historical_rival = LAN
-historical_rival = MLO
-historical_rival = COR
-historical_rival = GEN
-historical_rival = SIE
 
 
-
-1442.1.28 = {
+1400.11.19 = {
 	monarch = { 
 		name = "Maria I"
 		dynasty = "d'Aragó"
-		birth_date = 1400.6.7
+		birth_date = 1400.11.19
 		dip = 3
 		mil = 4
 		adm = 2

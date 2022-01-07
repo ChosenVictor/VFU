@@ -1,13 +1,11 @@
 #829 - Magdalena
 
 culture = muisca
-
-is_city = yes
 discovered_by = south_american
 discovered_by = MCA
 religion = animism
 capital = "Tairo"
-trade_goods = coffee
+trade_goods = unknown
 hre = no
 base_tax = 1 
 base_production = 1

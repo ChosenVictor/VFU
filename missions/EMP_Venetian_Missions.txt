@@ -19,11 +19,15 @@ emp_ven_slot_1 = {
 		position = 1
 		
 		trigger = {
-			has_institution = printing_press
+			has_institution = renaissance
 		}
 		effect = {
 			add_country_modifier = {
 				name = ven_aldine_monopoly_modifier
+				duration = 7300
+			}
+			add_country_modifier = {
+				name = gc_investment
 				duration = 7300
 			}
 		}
@@ -95,12 +99,11 @@ emp_ven_slot_2 = {
 			}
 		}
 		effect = {
-			112 = {
-				add_province_modifier = {
+				add_country_modifier = {
 					name = "ven_urban_renewal"
 					duration = 7300
 				}
-			}
+			
 		}
 	}
 	
@@ -243,7 +246,7 @@ emp_ven_slot_3 = {
 			add_mil_power = 50
 			add_country_modifier = {
 				name = ven_venture_captain_recruitment
-				duration = 7300
+				duration = 18250
 			}
 		}
 	}
@@ -426,10 +429,9 @@ emp_ven_slot_4 = {
 		
 		trigger = {
 			navy_size_percentage = 1
-			sailors_percentage = 0.6
 		}
 		effect = {
-			add_navy_tradition = 10
+			add_navy_tradition = 20
 			define_admiral = {
 				shock = 3
 				fire = 2
@@ -439,6 +441,28 @@ emp_ven_slot_4 = {
 			add_country_modifier = {
 				name = "ven_arsenal_marines"
 				duration = -1
+			}
+			109 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			113 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -451,94 +475,44 @@ emp_ven_slot_4 = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					province_id = 1298
+					province_id = 109
 					NOT = {
 						trade_share = {
 							country = ROOT
-							share = 50
+							share = 25
 						}
 					}
-				}
-				AND = {
-					owned_by = GEN
-					is_capital = yes
-				}
-				AND = {
-					NOT = { exists = GEN }
-					province_id = 101
 				}
 			}
 		}
 		trigger = {
-			1298 = {
+			109 = {
 				trade_share = {
 					country = ROOT
-					share = 50
-				}
-			}
-			if = {
-				limit = { exists = GEN }
-				GEN = {
-					capital_scope = {
-						controlled_by = ROOT
-					}
-				}
-			}
-			else = {
-				101 = {
-					controlled_by = ROOT
+					share = 25
 				}
 			}
 		}
 		effect = {
-			add_mercantilism = 1
+			add_mercantilism = 3
 			add_country_modifier = {
 				name = "ven_genoese_humiliation"
 				duration = 3650
 			}
-		}
-	}
-	
-	emp_ven_the_francocracy = {
-		icon = la_latinocrazia
-		position = 3
-		required_missions = { emp_ven_reclaim_the_aegean }
-		
-		provinces_to_highlight = {
-			province_id = 151
-			NOT = { owned_by = ROOT }
-		}
-		trigger = {
-			151 = {
-				owned_by = ROOT
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "ven_la_francocrazia"
-				duration = -1
-			}
-		}
-	}
-	
-	emp_ven_challenge_papal_supremacy = {
-		icon = counter_reformation
-		position = 4
-		required_missions = { emp_ven_the_francocracy }
-		
-		trigger = {
-			religious_unity = 1
-			OR = {
-				is_papal_controller = yes
-				PAP = { vassal_of = ROOT }
-				owns = 118
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "ven_autonomous_venetian_patriarchate"
-				duration = 5475
-			}
+			apulia_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}
+			central_italy_area = {
+					limit = {
+						NOT = { is_permanent_claim = ROOT }
+						NOT = { is_core = ROOT	}
+					}
+					add_permanent_claim = ROOT
+				}	
 		}
 	}
 }
@@ -567,70 +541,23 @@ emp_ven_slot_5 = {
 		
 		provinces_to_highlight = {
 			OR = {
-				province_id = 137
-				province_id = 1308
-			}
-			NOT = {
-				trade_share = {
-					country = ROOT
-					share = 25
-				}
-			}
+				province_id = 113
+				province_id = 109
+			}	
 		}
 		trigger = {
-			137 = {
-				trade_share = {
-					country = ROOT
-					share = 25
-				}
+			113= {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
-			1308 = {
-				trade_share = {
-					country = ROOT
-					share = 50
-				}
+			109 = {
+				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			add_mercantilism = 2
 			add_dip_power = 100
-		}
-	}
-	
-	emp_ven_reclaim_the_aegean = {
-		icon = reclaim_the_aegean
-		position = 2
-		required_missions = { emp_ven_monopolize_adriatic_trade emp_ven_expand_the_arsenal }
-		
-		provinces_to_highlight = {
-			OR = {
-				area = morea_area
-				area = aegean_archipelago_area
-			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
-		}
-		trigger = {
-		morea_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			aegean_archipelago_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			151 = {
-				if = {
-					limit = {
-						NOT = {
-							is_permanent_claim = ROOT
-							is_core = ROOT
-						}
-					}
-					add_permanent_claim = ROOT
-				}
-			}
+				
+			
 			321 = {
 				if = {
 					limit = {
@@ -642,22 +569,56 @@ emp_ven_slot_5 = {
 					add_permanent_claim = ROOT
 				}
 			}
+			163 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			320 = {
+				if = {
+					limit = {
+						NOT = {
+							is_permanent_claim = ROOT
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
 		}
 	}
 	
+
+	
 	emp_ven_annex_cyprus = {
 		icon = mission_invade_island
-		position = 3
-		required_missions = { emp_ven_reclaim_the_aegean }
+		position = 2
+		required_missions = { emp_ven_monopolize_adriatic_trade }
 		
 		provinces_to_highlight = {
-			province_id = 321
+			OR = {
+				province_id = 321
+				province_id = 320
+				province_id = 163
+			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			321 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			163 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			320 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
@@ -665,6 +626,10 @@ emp_ven_slot_5 = {
 			add_country_modifier = {
 				name = "mediterranean_ambition"
 				duration = 3650
+			}
+			add_country_modifier = {
+				name = "ven_la_francocrazia"
+				duration = -1
 			}
 			delta_area = {
 				limit = {
@@ -685,7 +650,7 @@ emp_ven_slot_5 = {
 	
 	emp_ven_control_the_means_of_transaction = {
 		icon = control_the_means_of_transaction
-		position = 4
+		position = 3
 		required_missions = { emp_ven_annex_cyprus }
 		
 		provinces_to_highlight = {
@@ -721,88 +686,6 @@ emp_ven_slot_5 = {
 					power = 20
 					key = PROTECTED_VENETIAN_MERCHANTS
 				}
-			}
-		}
-	}
-	
-	emp_ven_this_mythical_realm = {
-		icon = sources_of_trade
-		position = 5
-		required_missions = { emp_ven_control_the_means_of_transaction }
-		
-		provinces_to_highlight = {
-			OR = {
-				trade_company_region = trade_company_east_india
-				trade_company_region = trade_company_coromandel
-				trade_company_region = trade_company_west_india
-			}
-			is_sea = no
-			NOT = { owned_by = ROOT }
-			has_discovered = ROOT
-		}
-		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = emp_ven_this_mythical_realm_tt
-				OR = {
-					trade_company_east_india = { 
-						owned_by = ROOT
-						is_city = yes
-					}
-					trade_company_coromandel = {
-						owned_by = ROOT
-						is_city = yes
-					}
-					trade_company_west_india = {
-						owned_by = ROOT
-						is_city = yes
-					}
-				}
-			}
-		}
-		effect = {
-			add_mercantilism = 2
-		}
-	}
-	
-	emp_ven_the_shape_of_trades_to_come = {
-		icon = the_shape_of_trades_to_come
-		position = 5
-		required_missions = { emp_ven_this_mythical_realm }
-		
-		provinces_to_highlight = {
-			OR = {
-				superregion = india_superregion
-				superregion = east_indies_superregion
-			}
-			is_sea = no
-			NOT = { owned_by = ROOT }
-			has_discovered = ROOT
-		}
-		trigger = {
-			calc_true_if = {
-				desc = emp_ven_the_shape_of_trades_to_come_tt
-				all_owned_province = {
-					OR = {
-						superregion = india_superregion
-						superregion = east_indies_superregion
-					}
-				}
-				amount = 10
-			}
-			1340 = { # Coromandel
-				is_strongest_trade_power = ROOT
-			}
-			1343 = { # Bengal
-				is_strongest_trade_power = ROOT
-			}
-			1361 = { # Malacca
-				is_strongest_trade_power = ROOT
-			}
-		}
-		effect = {
-			add_country_modifier = {
-				name = "ven_nothing_ventured_nothing_gained"
-				duration = 5475
 			}
 		}
 	}

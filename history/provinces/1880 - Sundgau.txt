@@ -1,8 +1,7 @@
 # 1880 - Sundgau
 
-owner = MLH
-controller = MLH
-add_core = MLH
+owner = TIR
+controller = TIR
 add_core = TIR
 capital = "Altkirch"
 is_city = yes

@@ -1,12 +1,12 @@
 #825 - Bogota
 
+
 culture = muisca
 discovered_by = south_american
 discovered_by = andean
 religion = inti
-capital = "Bogotá"
-is_city = yes
-trade_goods = gems
+capital = "Bogotï¿½"
+trade_goods = unknown
 hre = no
 base_tax = 6 
 base_production = 6
@@ -21,7 +21,7 @@ center_of_trade = 1
 	add_core = SPA
 	religion = catholic
 	culture = castillian
-} # Founded by Gonzalo Jiménez de Quesada
+} # Founded by Gonzalo Jimï¿½nez de Quesada
 1810.7.20 = {
 	owner = COL
 	controller = COL

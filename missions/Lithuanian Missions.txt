@@ -38,8 +38,6 @@ lithuanian_missions_1 = {
 		icon = mission_luther_theses
 		required_missions = { develop_ukraine_1 }
 		trigger = {
-			NOT = { current_age = age_of_discovery }
-			NOT = { current_age = age_of_reformation }
 			religious_unity = 1
 		}
 		effect = {
@@ -55,7 +53,7 @@ lithuanian_missions_1 = {
 					culture = lithuanian
 					type = theologian
 					skill = 3
-					cost_multiplier = 0.5
+					cost_multiplier = 0.67
 				}
 				add_country_modifier = {
 					name = "lit_conferedation_on_religion"
@@ -71,7 +69,7 @@ lithuanian_missions_1 = {
 					culture = lithuanian
 					type = inquisitor
 					skill = 3
-					cost_multiplier = 0.25
+					cost_multiplier = 0.67
 				}
 			}
 		}
@@ -375,6 +373,10 @@ lithuanian_missions_slot = {
 			owns_core_province = 285
 		}
 		effect = {
+			add_country_modifier = {
+				name = "PR_LIT_mission"
+				duration = -1
+			}
 			add_mercantilism = 2
 			if = {
 				limit = {

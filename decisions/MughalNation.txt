@@ -15,16 +15,12 @@ country_decisions = {
 			NOT = { tag = MUG }
 			NOT = { tag = TUR }
 			NOT = { tag = HLR }
+			NOT = { tag = TIM }
 			OR = {
 				NOT = { exists = MUG }
 				ai = no
 			}
-			OR = {
-				culture_group = iranian
-				primary_culture = turkmeni
-				primary_culture = uzbehk
-				primary_culture = kirgiz
-			}
+			tag = AFG
 			OR = {
 				ai = no
 				AND = {
@@ -66,10 +62,10 @@ country_decisions = {
 			owns_core_province = 522 #Delhi
 		}
 		effect = {
+			change_tag = MUG
 			522 = {
 				move_capital_effect = yes
 			}
-			change_tag = MUG
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			change_primary_culture = kanauji
@@ -86,49 +82,22 @@ country_decisions = {
 				add_permanent_claim = MUG
 			}
 			add_prestige = 25
-
-			if = {
-				limit = {
-					NOT = { technology_group = indian }
+			add_government_reform = mughal_government
+			change_unit_type = gunpowder_empire
+			define_ruler = {
+				name = "Babur"
+				dynasty = "Timurid"
+				
+				religion = sunni
+				claim = 100
+				adm = 3
+				dip = 5
+				mil = 6
 				}
-				change_technology_group = indian
-				change_unit_type = indian
-			}
 			if = {
-				limit = {
-					NOT = { government = monarchy }
-					is_revolutionary = no
-				}
-				change_government_to_monarchy = yes
-			}
-			if = {
-				limit = {
-					has_dlc = "Dharma"
-					is_revolutionary = no
-				}
-				add_government_reform = indian_sultanate_reform
-				add_government_reform = mughal_government
-			}
-			if = {
-				limit = {
-					has_dlc = "Dharma"
-					has_reform_level = 3
-				}
-				add_government_reform = mansabdari_reform
-			}
-			if = {
-				limit = {
-					has_dlc = "Dharma"
-					has_reform_level = 4
-				}
-				add_government_reform = zabt_reform
-			}
-			if = {
-				limit = {
-					has_reform = states_general_reform
-				}
-				remove_government_reform = states_general_reform
-			}
+				limit = { has_heir = yes }
+				kill_heir = {}
+			}	
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas

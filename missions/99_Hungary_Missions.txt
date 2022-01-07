@@ -459,6 +459,7 @@ hun_ottoman_group = {
 				}
 				add_permanent_claim = ROOT
 			}
+			country_event = { ID = flavor_hun.20 }
 		}
 	}
 	
