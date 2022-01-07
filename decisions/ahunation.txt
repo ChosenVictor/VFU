@@ -1,6 +1,10 @@
-austria-hungary_nation = {
+country_decisions = {
+
+	h_austria-hungary_nation = {
 		major = yes
 		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
 			NOT = { has_country_flag = formed_ahu_flag }
 			OR = {
 				ai = no
@@ -106,9 +110,6 @@ austria-hungary_nation = {
 	 	effect = {
 			change_tag = AHU
 			add_prestige = 25
-			AHU = {
-				set_capital = 134 # Wien
-			}
 			if = {
 				limit = { has_custom_ideas = no }
 				country_event = { id = ideagroups.1 } #Swap Ideas
@@ -119,3 +120,4 @@ austria-hungary_nation = {
 			factor = 1
 		}
 	}
+}
