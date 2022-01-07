@@ -209,43 +209,43 @@ MOS_ideas = {
 
 RUS_ideas = {
 	start = {
-		core_creation = -0.10
+		core_creation = -0.15
 		global_manpower_modifier = 0.33
 	}
 
 	bonus = {
-		legitimacy = 1
+		fire_damage = 0.15
 	}
 
 	trigger = {
 		tag = RUS
 	}
 	free = yes		#will be added at load.
-
-	land_of_the_rus = {
-		ae_impact = -0.1
+	
+	life_long_conscription  = {
+		infantry_power = 0.1
 	}
 	siberian_frontier = {
-		stability_cost_modifier = -.1
+		may_establish_frontier = yes
+		auto_explore_adjacent_to_colony = yes
 	}
 	russian_artillery_yard = {
-		artillery_cost = -0.1
-		artillery_power = 0.1
+		artillery_cost = -0.2
+		backrow_artillery_damage = 0.10
 	}
-	life_long_conscription  = {
-		land_forcelimit_modifier = 0.50
-	}
-
-	abolish_the_mestnichestvo = {
-		yearly_corruption = -0.1
+	gatherers_of_tribute = {
+		global_tax_modifier = 0.2
 	}
 	table_of_ranks = {
 		advisor_cost = -0.10
 		army_tradition = 0.25
 	}	
+	abolish_the_mestnichestvo = {
+		reinforce_speed = 0.25
+	}
 	curriculum_of_the_cadet_corps = {
-		land_morale = 0.05
-		fire_damage_received = -0.1
+		land_morale = 0.1
+		fire_damage_received = -0.10
 	}
 }
 
@@ -1010,7 +1010,7 @@ POL_ideas = {
 		war_exhaustion = -0.02
 	}
 	winged_hussars = {
-		cavalry_power = 0.33
+		cavalry_power = 0.20
 		cossacks_loyalty_modifier = 0.1
 	}
 	wojsko_komputoe = {
