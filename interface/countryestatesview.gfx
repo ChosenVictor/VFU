@@ -2,7 +2,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_estates_icons"
 		texturefile = "gfx//interface//estates_icons.dds"
-		noOfFrames = 11
+		noOfFrames = 13
 		loadType = "INGAME"
 	}
 	
@@ -134,11 +134,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_estates_icons_colour-stroke"
 		texturefile = "gfx/interface/estates_icons_colour-stroke.dds"
-		noOfFrames = 11
+		noOfFrames = 13
 		loadType = "INGAME"
 	}
 
-		spriteType = {
+	spriteType = {
 		name = "privilege_admin_power"
 		texturefile = "gfx/interface/privileges/privilege_admin_power.dds"
 	}
@@ -407,7 +407,6 @@ spriteTypes = {
 		name = "privilege_monopoly_of_goods_slaves"
 		texturefile = "gfx/interface/privileges/privilege_monopoly_of_goods_slaves.dds"
 	}
-							
 	spriteType = {
 		name = "privilege_cawa_peacekeeper"
 		texturefile = "gfx/interface/privileges/privilege_cawa_peacekeeper.dds"
@@ -467,5 +466,4 @@ spriteTypes = {
 		name = "privilege_centralized"
 		texturefile = "gfx/interface/privileges/privilege_centralized.dds"
 	}
-
 }
