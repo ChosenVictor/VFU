@@ -1,6 +1,6 @@
 country_decisions = {
 
-	h_austria-hungary_nation = {
+	austria-hungary_nation = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes

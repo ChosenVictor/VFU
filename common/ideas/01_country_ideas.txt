@@ -83,3 +83,40 @@ PR2_ideas = {
         manpower_recovery_speed = 0.15
     }
 }
+
+AHU_ideas = {
+    start = {
+		manpower_recovery_speed = 0.2
+		improve_relation_modifier = 0.3
+    }
+    bonus = {
+		
+    }
+    trigger = {
+        tag = AHU
+    }
+    free = yes
+    AHU_1 = {
+		imperial_authority = 0.1
+		diplomatic_annexation_cost = -0.15
+    }
+    AHU_2 = {
+		land_forcelimit_modifier = 0.3
+    }
+    AHU_3 = {
+		inflation_reduction = 0.1
+    }
+    AHU_4 = {
+		land_morale = 0.15
+    }
+    AHU_5 = {
+		global_missionary_strength = 0.02
+    }
+    AHU_6 = {
+		diplomatic_upkeep = 1
+    }
+    AHU_7 = {
+		reinforce_speed = 0.3
+		discipline = 0.05	
+    }
+}
